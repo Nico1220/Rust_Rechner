@@ -1,0 +1,20 @@
+[package]
+name = "Rust_Rechner"
+version = "0.1.0"
+authors = ["Nico Straßgschwandtner, Matej Vician, Benjamin Urlesberger, Kerstin Klinger"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+version = "0.1.0"
+
+# The release profile, used for `cargo build --release`.
+[profile.release]
+opt-level = 3
+debug = false
+rpath = false
+lto = true
+debug-assertions = false
+codegen-units = 1
+panic = 'unwind'

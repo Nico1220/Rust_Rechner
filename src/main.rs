@@ -1,9 +1,7 @@
 extern crate gtk;
-
 pub mod stack;
 pub mod calc;
-
-// use gdk::prelude::*;
+use std::thread::Builder;
 use gtk::prelude::*;
 use gtk::{Builder, Button, Window, TextView, TextBuffer};
 

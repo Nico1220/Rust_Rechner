@@ -2,8 +2,7 @@
 name = "Rust_Rechner"
 version = "0.1.0"
 authors = ["Nico Straßgschwandtner, Matej Vician, Benjamin Urlesberger, Kerstin Klinger"]
-edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+edition = "2022"
 
 [dependencies]
+eframe = "0.14.0"

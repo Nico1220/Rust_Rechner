@@ -1,32 +1,14 @@
+ use eframe::{epi::App, run_nativ}
 
-fn main() {
-    let mut z1:f64 = 4.0;
-    let mut z2:f64 = 2.0;
-    let mut rechntyp = "*";
-    let mut texteingabe = "y";
+struct Headlines;
 
-    println!("Zahl eingeben:");
-    println!("Rechentyp eingeben :");
-    println!("Zahl eingeben:");
+impl App for Headlines {
+    fn update(&mut self, ctx: &eframe::egui::CtxRef, frame &mut eframe::epi::Frame)
+    {
 
-    if "+" == &*rechntyp{
-        println!("Ergebnis: {}", z1 + z2);
     }
-    else if "-" == &*rechntyp{
-        println!("Ergebnis: {}", z1 - z2);
-    }
-    else if "*" == &*rechntyp{
-        println!("Ergebnis: {}", z1*z2);
-    }
-    else if "/" == &*rechntyp{
-        println!("Ergebnis: {}", z1/z2);
-    }
-    else{
-        println!("Fehlerhafte Eingabe")
-    }
-
-    println!("Beenden [y/n]:");
-
-
-
 }
+fn main() {
+    run_nativ(app, native_optins)
+}
+

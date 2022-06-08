@@ -5,4 +5,6 @@ authors = ["Nico Straßgschwandtner, Matej Vician, Benjamin Urlesberger, Kerstin
 edition = "2021"
 
 [dependencies]
-eframe = "0.14.0"
+libadwaita = "*"
+gtk4 = "*"
+glib = "*"

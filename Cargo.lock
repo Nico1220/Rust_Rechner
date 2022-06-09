@@ -6,8 +6,6 @@ version = 3
 name = "Rust_Rechner"
 version = "0.1.0"
 dependencies = [
- "glib",
- "gtk4",
  "libadwaita",
 ]
 

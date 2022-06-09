@@ -1,25 +1,17 @@
-use libadwaita::{prelude::{ApplicationExt, AppInfoExtManual, WidgetExt},
-Application, ApplicationWindow,
+mod main_window;
+use main_window::MainWindow;
+use gtk4::{
+    prelude::{ApplicationExt, ApplicationExtManual},
+    traits::WidgetExt,
 };
-
+use libadwaita::Application;
 fn build_ui(application: &Application) {
-    let content = libadwaita::gtk::Box::new(Orientation::Vertical, 0);
-    content.append(&HeaderBar::builder()
-        .title_widget(&WindowTitle::new("My GTK4 RSS Reader", ""))
-        .build());
-    let window = ApplicationWindow::builder()
-        .application(application)
-        .title("My GTK4 RSS Reader")
-        .default_height(250)
-        .default_width(400)
-        .content(&content)
-        .build();
+    let window = MainWindow::new(application);
     window.show();
 }
-
 pub fn main() {
-    let application = Application::new(Some("com.example.gtk-rss-reader"), Default::default());
-    
-    application.connect_activate(build_ui);
+    let application = Application::new(
+        Some("com.example.gtk-rss-reader"), Default::default()); 
+    application.connect_activate(build_ui); 
     application.run();
 }
